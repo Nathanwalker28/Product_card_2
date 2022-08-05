@@ -1,0 +1,107 @@
+@font-face {
+    font-family: 'Montserrat';
+    src: url('../fonts/Montserrat-Thin.woff2') format('woff2'),
+        url('../fonts/Montserrat-Thin.woff') format('woff');
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'Fraunces';
+    src: url('../fonts/Fraunces-9ptBlack.woff2') format('woff2'),
+        url('../fonts/Montserrat-Thin.woff') format('woff');
+    font-style: normal;
+    font-display: swap;
+}
+body{
+    display: flex;
+    font-size: 14px;
+    background-color: hsl(30, 38%, 92%);
+    height: 100vh;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    font-family: 'Fraunces';
+    font-weight: 700;
+    box-sizing: border-box;
+}
+pre{
+    color:  hsl(228, 12%, 48%);
+}
+.card-group{
+    width: 600px;
+    display: flex;
+    background: hsl(0, 0%, 100%);
+    border-radius: 10px;
+}
+.card-image{
+    width: 300px;
+    height: 100%;
+    background-image: url(../images/image-product-desktop.jpg);
+    background-size: cover;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+.card{
+    width: 38%;
+    padding: 6%;
+}
+.card-text{
+    font-family: 'Montserrat';
+    font-weight: 700;
+    color:  hsl(228, 12%, 48%);
+}
+.prix{
+    display: flex;
+    align-items: center;
+}
+.prix h4{
+    font-size: 20px;
+    color: hsl(158, 36%, 37%);
+    width: 50%;
+}
+.prix p{
+    text-decoration: line-through;
+    font-weight: 700;
+    font-family: 'Montserrat';
+    color : hsl(228, 12%, 48%);
+    width: 50%;
+}
+.card a{
+    background: hsl(158, 36%, 37%);
+    width: 90%;
+    border: none;
+    height: 3em;
+    display: block;
+    border-radius: 0.5em;
+    color: hsl(0, 0%, 100%);
+    text-align: center;
+    line-height: 3em;
+    text-decoration: none;
+}
+a:hover{
+    background:  hsl(156, 34%, 29%);
+}
+@media screen and (max-width : 500px) {
+    .card-group{
+        width: 380px;
+        height: 700px;
+        flex-direction: column;
+    }
+    .card-image{
+        height: 300px;
+        width: 380px;
+        background-image: url(../images/image-product-mobile.jpg);
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px ;
+        border-bottom-left-radius: 0 ;
+    }
+    .card{
+        width: 88%;
+    }
+    .card-text{
+        width: auto;
+    }
+    .card a{
+        width: 88%;
+    }
+}
